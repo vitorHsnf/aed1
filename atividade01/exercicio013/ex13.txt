@@ -1,0 +1,5 @@
+13 - Suponha que v é um vetor. Descreva o porquê existe uma 
+diferença entre escrever v[3] e v+3
+
+R: v[3] retorna o 3º elemento do vetor. 
+"v+3" retorna o endereço armazenado no 3º elemento.
