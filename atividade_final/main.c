@@ -1,19 +1,33 @@
 #include "tree.h"
 
-int main()
+int main(int argc, char **argv)
 {
     TreeNode* arvore;
-    int valor;
-    int inserir[] = {5,15,3,7,12,18,2,4,14};
-    
     arvore = create(10, NULL);
 
-    for(int i = 0; i < 9; i++)
+    int inserir[] = {5,
+                     15,
+                     3,
+                     7, 12, 18, 2, 4, 14};
+
+    for (int i = 0; i < 9; i++)
     {
         arvore = insert(inserir[i], arvore);
-        printf("Inseriste o valor: %d \n", inserir[i]);
     }
 
-    scanf("%d", &valor);
-    printf("%d", search(arvore, valor));
+    printf("\nÁrvore:\n");
+    imprime(arvore, 0);
+
+    removeMin(arvore, 5);
+    removeMin(arvore, 2);
+    removeMin(arvore, 15);
+    //  removeMin(arvore, 2);
+
+    // removeMin(arvore, 15);
+
+    printf("\nÁrvore:\n");
+    imprime(arvore, 0);
+    search(arvore, 2);
+
+    return 0;
 }
