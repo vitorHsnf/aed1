@@ -1,7 +1,7 @@
 #include "lde_descritor.h"
 #define TAMANHO 10
 
-int main(int argc, char**argv)
+int main(int argc, char** argv)
 {
     Descritor *lista;
     
